@@ -1,9 +1,10 @@
-FROM maven:3.8.5-openjdk-17 AS build
+
+FROM maven:3.9.8-eclipse-temurin-24-jammy AS build
 WORKDIR /app
 COPY . /app
 RUN mvn clean package -DskipTests
 
-FROM openjdk:17.0.1-jdk-slim
+FROM eclipse-temurin:24-jre-jammy
 WORKDIR /app
 COPY --from=build /app/target/*.jar moneybridge.jar
 EXPOSE 8080
