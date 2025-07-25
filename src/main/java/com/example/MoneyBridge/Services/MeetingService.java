@@ -9,7 +9,7 @@ import com.example.MoneyBridge.repository.MeetingProposalRepository;
 import com.example.MoneyBridge.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional; // Use Spring's Transactional
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class MeetingService {

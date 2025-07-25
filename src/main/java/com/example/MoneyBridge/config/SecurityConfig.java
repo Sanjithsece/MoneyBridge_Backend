@@ -50,8 +50,6 @@ public class SecurityConfig {
                         .requestMatchers("/api/users/register/**", "/api/users/login").permitAll()
                         .requestMatchers("/uploads/**").permitAll()
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-
-                        // Rule to secure everything else
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));

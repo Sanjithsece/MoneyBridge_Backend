@@ -31,7 +31,7 @@ public class MeetingController {
         }
     }
 
-    @PutMapping("/{proposalId}/reject") // ADD THIS NEW ENDPOINT
+    @PutMapping("/{proposalId}/reject")
     public ResponseEntity<?> rejectMeeting(@PathVariable Long proposalId) {
         try {
             return ResponseEntity.ok(meetingService.rejectProposal(proposalId));
